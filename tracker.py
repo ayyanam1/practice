@@ -9,9 +9,14 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from PyQt5.QtWidgets import QPushButton, QFileDialog
 
 class Ui_MainWindow(object):
+    pushButton: QPushButton
+
+    def __init__(self):
+        self.button = None
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1127, 682)
@@ -30,14 +35,14 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton.setFont(font)
         self.pushButton.setStyleSheet("QPushButton{\n"
-"  background-color:#0489ff;\n"
-" border: 2px solid #8ac8ff;  \n"
-"  border-radius:12;\n"
-"  color:white;\n"
-"}\n"
-"QPushButton:hover{\n"
-"  background-color:#00498a;\n"
-"}")
+                                      "  background-color:#0489ff;\n"
+                                      " border: 2px solid #8ac8ff;  \n"
+                                      "  border-radius:12;\n"
+                                      "  color:white;\n"
+                                      "}\n"
+                                      "QPushButton:hover{\n"
+                                      "  background-color:#00498a;\n"
+                                      "}")
         self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setGeometry(QtCore.QRect(670, 590, 131, 61))
@@ -48,20 +53,20 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_2.setFont(font)
         self.pushButton_2.setStyleSheet("QPushButton{\n"
-"  background-color:#0489ff;\n"
-"  border: 2px solid #8ac8ff;\n"
-"  border-radius:12;\n"
-"  color:white;\n"
-"}\n"
-"QPushButton:hover{\n"
-"  background-color:#00498a;\n"
-"}")
+                                        "  background-color:#0489ff;\n"
+                                        "  border: 2px solid #8ac8ff;\n"
+                                        "  border-radius:12;\n"
+                                        "  color:white;\n"
+                                        "}\n"
+                                        "QPushButton:hover{\n"
+                                        "  background-color:#00498a;\n"
+                                        "}")
         self.pushButton_2.setObjectName("pushButton_2")
         self.mnemoniki = QtWidgets.QFrame(self.centralwidget)
         self.mnemoniki.setGeometry(QtCore.QRect(30, 150, 191, 261))
         self.mnemoniki.setStyleSheet(" background-color:#ffffff;\n"
-"  border: 1px solid #5b5b5b;\n"
-"  border-radius:12;")
+                                     "  border: 1px solid #5b5b5b;\n"
+                                     "  border-radius:12;")
         self.mnemoniki.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.mnemoniki.setFrameShadow(QtWidgets.QFrame.Raised)
         self.mnemoniki.setObjectName("mnemoniki")
@@ -74,15 +79,15 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.label.setFont(font)
         self.label.setStyleSheet(" background-color:#0489ff;\n"
-"  border: 2px solid #8ac8ff;\n"
-"  border-radius:12;\n"
-"  color:white;")
+                                 "  border: 2px solid #8ac8ff;\n"
+                                 "  border-radius:12;\n"
+                                 "  color:white;")
         self.label.setObjectName("label")
         self.frame = QtWidgets.QFrame(self.centralwidget)
         self.frame.setGeometry(QtCore.QRect(340, 150, 771, 361))
         self.frame.setStyleSheet(" background-color:#ffffff;\n"
-"  border: 1px solid #5b5b5b;\n"
-"  border-radius:12;")
+                                 "  border: 1px solid #5b5b5b;\n"
+                                 "  border-radius:12;")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
@@ -95,9 +100,9 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.label_2.setFont(font)
         self.label_2.setStyleSheet(" background-color:#0489ff;\n"
-"  border: 2px solid #8ac8ff;\n"
-"  border-radius:12;\n"
-"  color:white;")
+                                   "  border: 2px solid #8ac8ff;\n"
+                                   "  border-radius:12;\n"
+                                   "  color:white;")
         self.label_2.setObjectName("label_2")
         self.plainTextEdit = QtWidgets.QPlainTextEdit(self.centralwidget)
         self.plainTextEdit.setGeometry(QtCore.QRect(610, 520, 221, 51))
@@ -108,26 +113,57 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.plainTextEdit.setFont(font)
         self.plainTextEdit.setStyleSheet(" background-color:#ffffff;\n"
-"  border: 1px solid #5b5b5b;\n"
-"  border-radius:12;\n"
-" color:gray")
+                                         "  border: 1px solid #5b5b5b;\n"
+                                         "  border-radius:12;\n"
+                                         " color:gray")
         self.plainTextEdit.setObjectName("plainTextEdit")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_3.setGeometry(QtCore.QRect(810, 520, 61, 51))
         self.pushButton_3.setStyleSheet("QPushButton{\n"
-"  background-color:#0489ff;\n"
-"  border: 1px solid #5b5b5b;\n"
-"  border-radius:12;\n"
-"  color:white;\n"
-"}\n"
-"QPushButton:hover{\n"
-"  background-color:#00498a;\n"
-"}")
+                                        "  background-color:#0489ff;\n"
+                                        "  border: 1px solid #5b5b5b;\n"
+                                        "  border-radius:12;\n"
+                                        "  color:white;\n"
+                                        "}\n"
+                                        "QPushButton:hover{\n"
+                                        "  background-color:#00498a;\n"
+                                        "}")
         self.pushButton_3.setObjectName("pushButton_3")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    # Pushbutton
+        self.button = self.pushButton
+        self.button.clicked.connect(self.clicker)
+
+        self.button = self.pushButton_2
+        self.button.clicked.connect(self.clicker2)
+
+        self.button = self.pushButton_3
+        self.button.clicked.connect(self.clecker3)
+
+    # pushbutton_3 папка для результатов
+    def clecker3(self):
+        fname = QFileDialog.getSaveFileName(self.pushButton_3, "Open file", "C:\\Users\\first\\Desktop\\save", "ALL Files (*);;")
+
+        if fname:
+            self.button.setText(fname[0])
+
+    # pusbutton_2 сформировать json.file
+    def clicker2(self):
+        fname = QFileDialog.getSaveFileName(self.pushButton_2, "Open file", ".", "JSON Files (*.json);;")
+
+        if fname:
+            self.button.setText(fname[0])
+
+    # pushbutton file для загрузки Las.
+    def clicker(self):
+        fname = QFileDialog.getOpenFileName(self.pushButton, "Open file", "C:\\Users\\first\\Desktop\\las files", "ALL Files (*);;")
+
+        if fname:
+            self.button.setText(fname[0])
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -140,8 +176,11 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", "▼"))
 
 
+
+
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
