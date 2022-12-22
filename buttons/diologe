@@ -1,0 +1,35 @@
+# Pushbutton
+self.button = self.pushButton
+self.button.clicked.connect(self.clicker)
+
+self.button = self.pushButton_2
+self.button.clicked.connect(self.clicker2)
+
+self.button = self.pushButton_3
+self.button.clicked.connect(self.clecker3)
+
+
+# pushbutton_3 папка для результатов
+def clecker3(self):
+    fname = QFileDialog.getSaveFileName(self.pushButton_3, "Open file", "C:\\Users\\first\\Desktop\\save",
+                                        "ALL Files (*);;")
+
+    if fname:
+        self.button.setText(fname[0])
+
+
+# pusbutton_2 сформировать json.file
+def clicker2(self):
+    fname = QFileDialog.getSaveFileName(self.pushButton_2, "Open file", ".", "JSON Files (*.json);;")
+
+    if fname:
+        self.button.setText(fname[0])
+
+
+# pushbutton file для загрузки Las.
+def clicker(self):
+    fname = QFileDialog.getOpenFileName(self.pushButton, "Open file", "C:\\Users\\first\\Desktop\\las files",
+                                        "ALL Files (*);;")
+
+    if fname:
+        self.button.setText(fname[0])
